@@ -33,5 +33,5 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
--- format
-keymap.set('n', '<Space>ff', 'vim.lsp.buf.formatting()')
+-- clear search
+vim.keymap.set('n', '<Space>h', ':set hlsearch!<CR>')
