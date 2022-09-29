@@ -4,6 +4,7 @@ local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
+local util = require "lspconfig/util"
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -64,7 +65,18 @@ nvim_lsp.flow.setup {
     capabilities = capabilities
 }
 
-nvim_lsp.intelephense.setup {}
+nvim_lsp.intelephense.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+nvim_lsp.vuels.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    root_dir = nvim_lsp.util.find_node_modules_ancestor
+    --root_dir = util.root_pattern(".git", "package.json", "vue.config.js"),
+    --root_dir = nvim_lsp.util.root_pattern("package.json", "vue.config.js"),
+}
 
 nvim_lsp.tsserver.setup {
     on_attach = on_attach,
@@ -97,7 +109,10 @@ nvim_lsp.sumneko_lua.setup {
 
 nvim_lsp.omnisharp.setup {
     cmd = { "dotnet", "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\mason\\packages\\omnisharp\\OmniSharp.dll" },
-    root_dir = nvim_lsp.util.root_pattern('.csproj', '.sln'),
+    root_dir = util.root_pattern(".git", '*.csproj', '*.sln'),
+
+    on_attach = on_attach,
+    capabilities = capabilities,
 
     -- Enables support for reading code style, naming convention and analyzer
     -- settings from .editorconfig.
