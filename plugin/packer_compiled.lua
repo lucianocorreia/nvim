@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
-    loaded = true,
-    path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -93,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  everforest = {
+    loaded = true,
+    path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\everforest",
+    url = "https://github.com/sainnhe/everforest"
   },
   ["git.nvim"] = {
     loaded = true,

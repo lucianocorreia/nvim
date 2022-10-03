@@ -9,8 +9,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use { "catppuccin/nvim", as = "catppuccin" }
     use 'folke/tokyonight.nvim'
+    use 'sainnhe/everforest'
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -42,6 +42,8 @@ packer.startup(function(use)
     })
     use 'akinsho/nvim-bufferline.lua'
     -- use 'github/copilot.vim'
+
+    --use "voldikss/vim-floaterm"
 
     use 'lewis6991/gitsigns.nvim'
     use 'dinhhuy258/git.nvim' -- For git blame & browse
