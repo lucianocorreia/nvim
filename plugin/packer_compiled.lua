@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  everforest = {
-    loaded = true,
-    path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\everforest",
-    url = "https://github.com/sainnhe/everforest"
-  },
   ["git.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git.nvim",

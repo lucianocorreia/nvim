@@ -10,7 +10,6 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'folke/tokyonight.nvim'
-    use 'sainnhe/everforest'
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use 'onsails/lspkind-nvim' -- vscode-like pictograms
