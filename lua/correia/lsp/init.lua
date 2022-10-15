@@ -20,6 +20,10 @@ for _, server in pairs(servers) do
         opts.root_dir = lspconfig.util.find_node_modules_ancestor
     end
 
+    if server == "omnisharp" then
+        opts.cmd = { "dotnet", "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\mason\\packages\\omnisharp\\OmniSharp.dll" }
+    end
+
     local has_custom_opts, server_custom_opts = pcall(require, "correia.lsp.settings." .. server)
     if has_custom_opts then
         opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
