@@ -90,4 +90,3 @@ vim.keymap.set("n", ";p", function()
         layout_config = { height = 40 }
     })
 end)
-
