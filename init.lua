@@ -14,3 +14,5 @@ require "correia.gitsigns"
 require "correia.comments"
 -- require "correia.blankline"
 require "correia.bufferline"
+
+require "correia.mason"
