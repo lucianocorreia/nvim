@@ -36,15 +36,28 @@ return require('packer').startup(function(use)
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim   
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
+    use "akinsho/bufferline.nvim" --buffer (tabs)
+
+    --Treesitter
+    use "nvim-treesitter/nvim-treesitter" --Syntax highlighting
 
     -- telescope
     use 'kyazdani42/nvim-web-devicons' -- icons
     use 'nvim-telescope/telescope.nvim' -- telescopr
     use 'nvim-telescope/telescope-file-browser.nvim'
 
+    -- Git, Comments, Autorpairs
     use "lewis6991/gitsigns.nvim" --Git indication
     use "windwp/nvim-autopairs" --autopairs
     use "numToStr/Comment.nvim"
+    --use "lukas-reineke/indent-blankline.nvim"
+
+    --Snippets
+    use "L3MON4D3/LuaSnip" -- snippet engine
+    use "rafamadriz/friendly-snippets" -- many snippets to use
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
 
 end)
 
