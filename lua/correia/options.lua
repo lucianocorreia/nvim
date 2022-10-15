@@ -44,3 +44,7 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 --vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+-- omnisharp
+vim.g.OmniSharp_server_stdio = 1
+-- vim.g.OmniSharp_server_use_net6

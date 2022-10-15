@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["omnisharp-vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\omnisharp-vim",
+    url = "https://github.com/OmniSharp/omnisharp-vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Luciano Correia\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",

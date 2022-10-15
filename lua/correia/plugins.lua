@@ -72,4 +72,6 @@ return require('packer').startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use "jose-elias-alvarez/null-ls.nvim" --formatters and linters
 
+    use 'OmniSharp/omnisharp-vim'
+
 end)
