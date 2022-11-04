@@ -34,6 +34,16 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'folke/tokyonight.nvim'
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = function()
+            require("catppuccin").setup {
+                flavour = "macchiato" -- mocha, macchiato, frappe, latte
+            }
+            vim.api.nvim_command "colorscheme catppuccin"
+        end
+    }
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
