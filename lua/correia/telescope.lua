@@ -59,9 +59,9 @@ vim.keymap.set('n', ';b', function()
     builtin.buffers()
 end)
 
-vim.keymap.set('n', ';t', function()
-    builtin.help_tags()
-end)
+-- vim.keymap.set('n', ';t', function()
+--     builtin.help_tags()
+-- end)
 
 vim.keymap.set('n', ';;', function()
     builtin.resume()

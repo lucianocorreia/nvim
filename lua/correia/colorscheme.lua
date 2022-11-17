@@ -15,7 +15,7 @@
 --
 -- Load the colorscheme
 -- vim.cmd [[colorscheme tokyonight]]
-vim.cmd [[colorscheme catppuccin-macchiato]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 
 require("catppuccin").setup({})
 -- require("catppuccin").setup({

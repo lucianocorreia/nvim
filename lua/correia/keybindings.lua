@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -63,4 +63,15 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("n", ";o", ":SymbolsOutline<CR>", opts)
 
 -- clear search
-keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
+keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
+
+-- Todo comments
+keymap('n', ';t', ':TodoLocList<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "]t", function()
+    require("todo-comments").jump_next()
+end, { desc = "Next todo comment" })
+
+vim.keymap.set("n", "[t", function()
+    require("todo-comments").jump_prev()
+end, { desc = "Previous todo comment" })
+
