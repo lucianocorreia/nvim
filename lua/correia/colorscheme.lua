@@ -18,14 +18,14 @@
 vim.cmd [[colorscheme catppuccin]]
 
 require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    flavour = "macchiato", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "macchiato",
     },
     compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
     transparent_background = false,
-    term_colors = true,
+    term_colors = false,
     dim_inactive = {
         enabled = false,
         shade = "dark",
