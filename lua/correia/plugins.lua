@@ -57,6 +57,9 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim' -- telescopr
     use 'nvim-telescope/telescope-file-browser.nvim'
 
+    -- go lang
+    -- use 'fatih/vim-go'
+
     -- Git, Comments, Autorpairs
     use "lewis6991/gitsigns.nvim" --Git indication
     use "windwp/nvim-autopairs" --autopairs
@@ -81,7 +84,5 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use "jose-elias-alvarez/null-ls.nvim" --formatters and linters
-
-    use 'OmniSharp/omnisharp-vim'
 
 end)

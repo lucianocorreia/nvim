@@ -23,7 +23,8 @@ ts.setup {
         "lua",
         "rust",
         "vue",
-        "c_sharp",
+        "go",
+        "sql"
     },
     autotag = {
         enable = true,

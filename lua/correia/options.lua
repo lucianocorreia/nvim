@@ -32,7 +32,7 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h14",               -- the font used in graphical neovim applications
+  guifont = "FiraCode Nerd Font:h16",               -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
@@ -45,6 +45,9 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 --vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
--- omnisharp
-vim.g.OmniSharp_server_stdio = 1
--- vim.g.OmniSharp_server_use_net6
+-- vim hilights
+vim.g.go_highlight_fields = 1
+vim.g.go_highlight_functions = 1
+vim.g.go_highlight_function_calls = 1
+vim.g.go_highlight_extra_types = 1
+vim.g.go_highlight_operators = 1
