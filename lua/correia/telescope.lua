@@ -76,7 +76,10 @@ vim.keymap.set('n', ';q', function()
 end)
 
 vim.keymap.set('n', ';o', function()
-    builtin.lsp_document_symbols()
+    builtin.lsp_document_symbols({
+        show_line = true,
+        symbols = "method"
+    })
 end)
 
 vim.keymap.set("n", ";p", function()
