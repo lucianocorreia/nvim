@@ -24,3 +24,4 @@ require "correia.lsp"
 require "correia.null-ls"
 
 require "correia.toggleterm"
+require "correia.dashboard"

@@ -89,4 +89,6 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end }
 
+    use {'glepnir/dashboard-nvim'}
+
 end)
