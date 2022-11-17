@@ -23,3 +23,4 @@ require "correia.cmp"
 require "correia.lsp"
 require "correia.null-ls"
 
+require "correia.toggleterm"

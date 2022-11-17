@@ -37,12 +37,12 @@ return require('packer').startup(function(use)
     use {
         "catppuccin/nvim",
         as = "catppuccin",
-        config = function()
-            require("catppuccin").setup {
-                flavour = "macchiato" -- mocha, macchiato, frappe, latte
-            }
-            vim.api.nvim_command "colorscheme catppuccin"
-        end
+        -- config = function()
+        --     require("catppuccin").setup {
+        --         flavour = "macchiato" -- mocha, macchiato, frappe, latte
+        --     }
+        --     vim.api.nvim_command "colorscheme catppuccin"
+        -- end
     }
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope-file-browser.nvim'
 
     -- go lang
-    -- use 'fatih/vim-go'
+    use 'fatih/vim-go'
 
     -- Git, Comments, Autorpairs
     use "lewis6991/gitsigns.nvim" --Git indication
@@ -84,5 +84,9 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use "jose-elias-alvarez/null-ls.nvim" --formatters and linters
+
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end }
 
 end)
