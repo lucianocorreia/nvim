@@ -25,3 +25,4 @@ require "correia.null-ls"
 
 require "correia.toggleterm"
 require "correia.dashboard"
+-- require "correia.outline-symbols"

@@ -89,6 +89,7 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end }
 
-    use {'glepnir/dashboard-nvim'}
+    use { 'glepnir/dashboard-nvim' }
+    -- use 'simrat39/symbols-outline.nvim'
 
 end)

@@ -60,5 +60,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- keymap("n", ";o", ":SymbolsOutline<CR>", opts)
+
 -- clear search
 keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})

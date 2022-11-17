@@ -15,7 +15,7 @@
 --
 -- Load the colorscheme
 -- vim.cmd [[colorscheme tokyonight]]
-vim.cmd [[colorscheme catppuccin]]
+vim.cmd [[colorscheme catppuccin-macchiato]]
 
 require("catppuccin").setup({
     flavour = "macchiato", -- latte, frappe, macchiato, mocha
