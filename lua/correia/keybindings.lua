@@ -37,7 +37,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-k>", "<Esc>:m .-3<CR>==gi", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode
@@ -75,3 +75,8 @@ vim.keymap.set("n", "[t", function()
     require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
+-- close current buffer
+keymap('n', ';z', ':bw<CR>', { noremap = true, silent = true })
+
+-- Save file
+keymap('n', ';w', ':w<CR>', { noremap = true, silent = true })

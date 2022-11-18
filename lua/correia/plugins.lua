@@ -75,6 +75,8 @@ return require('packer').startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
 
+    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
+
     --Snippets
     use "L3MON4D3/LuaSnip" -- snippet engine
     use "rafamadriz/friendly-snippets" -- many snippets to use
@@ -89,8 +91,6 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end }
 
-
-    -- Lua
     use {
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
