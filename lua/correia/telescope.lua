@@ -42,7 +42,7 @@ telescope.setup {
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
+vim.keymap.set('n', '<Leader>f',
     function()
         builtin.find_files({
             -- no_ignore = true,
@@ -51,11 +51,11 @@ vim.keymap.set('n', ';f',
         })
     end)
 
-vim.keymap.set('n', ';s', function()
+vim.keymap.set('n', '<Leader>s', function()
     builtin.live_grep()
 end)
 
-vim.keymap.set('n', ';b', function()
+vim.keymap.set('n', '<Leader>b', function()
     builtin.buffers()
 end)
 
@@ -63,26 +63,26 @@ end)
 --     builtin.help_tags()
 -- end)
 
-vim.keymap.set('n', ';;', function()
-    builtin.resume()
-end)
+-- vim.keymap.set('n', ';;', function()
+--     builtin.resume()
+-- end)
 
-vim.keymap.set('n', ';e', function()
+vim.keymap.set('n', '<Leader>e', function()
     builtin.diagnostics()
 end)
 
-vim.keymap.set('n', ';q', function()
+vim.keymap.set('n', '<Leader>q', function()
     builtin.quickfix()
 end)
 
-vim.keymap.set('n', ';o', function()
+vim.keymap.set('n', '<Leader>o', function()
     builtin.lsp_document_symbols({
         show_line = true,
         symbols = { "method", "function" }
     })
 end)
 
-vim.keymap.set("n", ";p", function()
+vim.keymap.set("n", "<Leader>p", function()
     telescope.extensions.file_browser.file_browser({
         path = "%:p:h",
         cwd = telescope_buffer_dir(),

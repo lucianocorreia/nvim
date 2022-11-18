@@ -66,7 +66,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
 
 -- Todo comments
-keymap('n', ';t', ':TodoLocList<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>t', ':TodoLocList<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "]t", function()
     require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
@@ -76,7 +76,7 @@ vim.keymap.set("n", "[t", function()
 end, { desc = "Previous todo comment" })
 
 -- close current buffer
-keymap('n', ';z', ':bw<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>z', ':bw<CR>', { noremap = true, silent = true })
 
 -- Save file
-keymap('n', ';w', ':w<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
