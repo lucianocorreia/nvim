@@ -52,6 +52,7 @@ return require('packer').startup(function(use)
 
     --Treesitter
     use "nvim-treesitter/nvim-treesitter" --Syntax highlighting
+    use 'nvim-treesitter/nvim-treesitter-context'
 
     -- telescope
     use 'kyazdani42/nvim-web-devicons' -- icons
