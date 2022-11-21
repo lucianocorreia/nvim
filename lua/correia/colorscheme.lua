@@ -14,6 +14,7 @@
 -- })
 --
 -- Load the colorscheme
+-- vim.cmd [[colorscheme ayu]]
 -- vim.cmd [[colorscheme tokyonight]]
 vim.cmd [[colorscheme catppuccin-mocha]]
 
