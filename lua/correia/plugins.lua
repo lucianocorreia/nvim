@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'folke/tokyonight.nvim'
-    use "Shatur/neovim-ayu"
+    use 'sainnhe/everforest'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
