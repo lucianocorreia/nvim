@@ -42,6 +42,7 @@ keymap("n", "<A-k>", "<Esc>:m .-3<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -78,3 +79,6 @@ keymap('n', '<Leader>z', ':bw<CR>', { noremap = true, silent = true })
 
 -- Save file
 keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+
+-- vim go add tags
+keymap("n", "<Leader>,", ":GoAddTags<CR>", opts)

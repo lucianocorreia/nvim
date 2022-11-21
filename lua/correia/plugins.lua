@@ -74,6 +74,7 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
+    use "hrsh7th/cmp-nvim-lsp-signature-help"
 
     use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
@@ -103,7 +104,30 @@ return require('packer').startup(function(use)
         end
     }
 
-    use { 'glepnir/dashboard-nvim' }
+    -- use { 'glepnir/dashboard-nvim' }
     -- use 'simrat39/symbols-outline.nvim'
+    --
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function()
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
+        end
+    }
+
+
+    use {
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+                patterns = { "Makefile", "build/env.sh", "go.mod", "package.json", "composer.json" }
+            }
+        end
+    }
+
+    use 'norcalli/nvim-colorizer.lua'
 
 end)

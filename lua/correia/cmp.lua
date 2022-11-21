@@ -114,6 +114,7 @@ cmp.setup {
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = 'nvim_lsp_signature_help' },
         { name = 'cmp_tabnine' },
     },
     confirm_opts = {

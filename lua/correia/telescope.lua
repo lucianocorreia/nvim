@@ -15,6 +15,12 @@ telescope.setup {
             n = {
                 ["q"] = actions.close
             },
+        },
+    },
+    pickers = {
+        find_files = {
+            theme = "dropdown",
+            previewer = false,
         }
     },
     extensions = {
@@ -41,6 +47,8 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
+telescope.load_extension('projects')
+
 
 vim.keymap.set('n', '<Leader>f',
     function()
@@ -63,9 +71,9 @@ end)
 --     builtin.help_tags()
 -- end)
 
--- vim.keymap.set('n', ';;', function()
---     builtin.resume()
--- end)
+vim.keymap.set('n', '<Leader>\\', function()
+    telescope.extensions.projects.projects {}
+end)
 
 vim.keymap.set('n', '<Leader>e', function()
     builtin.diagnostics()
