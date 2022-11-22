@@ -85,6 +85,6 @@ keymap("n", "<Leader>,", ":GoAddTags<CR>", opts)
 
 -- neogit
 vim.keymap.set("n", "<Leader>gs", function()
-    require('neogit').open({ })
+    require('neogit').open()
 end, { desc = "Neogit open" })
 
