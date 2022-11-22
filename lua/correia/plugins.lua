@@ -131,6 +131,6 @@ return require('packer').startup(function(use)
     -- use "ThePrimeagen/harpoon"
     use 'ThePrimeagen/vim-be-good'
 
-    use 'Yggdroot/indentLine'
+    use "lukas-reineke/indent-blankline.nvim"
 
 end)
