@@ -1,6 +1,20 @@
 local neogit = require('neogit')
 
-neogit.setup {}
+neogit.setup {
+    disable_signs = false,
+    disable_hint = false,
+    disable_context_highlighting = false,
+    disable_commit_confirmation = false,
+    kind = "tab",
+    -- Change the default way of opening the commit popup
+    commit_popup = {
+        kind = "split",
+    },
+    -- Change the default way of opening popups
+    popup = {
+        kind = "split",
+    },
+}
 
 -- Keybinding	Function
 -- Tab	Toggle diff
