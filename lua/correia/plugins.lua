@@ -117,7 +117,6 @@ return require('packer').startup(function(use)
         end
     }
 
-
     use {
         "ahmedkhalf/project.nvim",
         config = function()
@@ -131,5 +130,6 @@ return require('packer').startup(function(use)
     }
 
     use 'norcalli/nvim-colorizer.lua'
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
 end)
