@@ -25,6 +25,6 @@ require "correia.null-ls"
 
 require "correia.toggleterm"
 require "correia.colorizer"
-require "correia.neogit"
+-- require "correia.neogit"
 -- require "correia.dashboard"
 -- require "correia.outline-symbols"

@@ -35,16 +35,12 @@ return require('packer').startup(function(use)
 
     use 'folke/tokyonight.nvim'
     use 'sainnhe/everforest'
+    use 'Shatur/neovim-ayu'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
-        -- config = function()
-        --     require("catppuccin").setup {
-        --         flavour = "macchiato" -- mocha, macchiato, frappe, latte
-        --     }
-        --     vim.api.nvim_command "colorscheme catppuccin"
-        -- end
     }
+
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
@@ -130,6 +126,10 @@ return require('packer').startup(function(use)
     }
 
     use 'norcalli/nvim-colorizer.lua'
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+    -- use "ThePrimeagen/harpoon"
+    use 'ThePrimeagen/vim-be-good'
+
 
 end)
