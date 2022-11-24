@@ -4,7 +4,7 @@ local status2, lspconfig = pcall(require, "mason-lspconfig")
 if (not status2) then return end
 
 mason.setup({
- ui = {
+    ui = {
         icons = {
             package_installed = "✓",
             package_pending = "➜",
@@ -14,6 +14,5 @@ mason.setup({
 })
 
 lspconfig.setup {
-    ensure_installed = { "sumneko_lua", "tailwindcss", "intelephense", "tsserver", "vuels", "gopls", "sqls", "xml-formatter" }
+    ensure_installed = { "sumneko_lua", "tailwindcss", "intelephense", "tsserver", "vuels", "gopls", "sqls" }
 }
-
