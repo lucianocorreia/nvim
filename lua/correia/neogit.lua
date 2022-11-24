@@ -9,14 +9,15 @@ neogit.setup {
     -- Disabling `auto_refresh` will make it so you have to manually refresh the status after you open it.
     auto_refresh = true,
     disable_builtin_notifications = false,
-    use_magit_keybindings = false, kind = "floating",
+    use_magit_keybindings = false,
+    kind = "tab",
     -- Change the default way of opening the commit popup
     commit_popup = {
-        kind = "floating",
+        kind = "tab",
     },
     -- Change the default way of opening popups
     popup = {
-        kind = "floating",
+        kind = "tab",
     },
 }
 

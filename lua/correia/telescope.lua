@@ -97,7 +97,7 @@ vim.keymap.set("n", "<Leader>p", function()
         hidden = true,
         grouped = true,
         previewer = false,
-        --[[ initial_mode = "normal",
-        layout_config = { height = 40 } ]]
+        -- initial_mode = "normal",
+        layout_config = { height = 30 } ,
     })
 end)

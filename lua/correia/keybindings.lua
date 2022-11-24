@@ -83,8 +83,8 @@ keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 -- vim go add tags
 keymap("n", "<Leader>,", ":GoAddTags<CR>", opts)
 
--- -- neogit
--- vim.keymap.set("n", "<Leader>gs", function()
---     require('neogit').open()
--- end, { desc = "Neogit open" })
+-- neogit
+vim.keymap.set("n", "<Leader>gs", function()
+    require('neogit').open()
+end, { desc = "Neogit open" })
 

@@ -126,7 +126,7 @@ return require('packer').startup(function(use)
     }
 
     use 'norcalli/nvim-colorizer.lua'
-    -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
     -- use "ThePrimeagen/harpoon"
     use 'ThePrimeagen/vim-be-good'
