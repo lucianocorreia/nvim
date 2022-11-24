@@ -20,6 +20,7 @@ ts.setup {
         "yaml",
         "css",
         "html",
+        "http",
         "lua",
         "rust",
         "vue",

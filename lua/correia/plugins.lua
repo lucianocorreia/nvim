@@ -133,4 +133,6 @@ return require('packer').startup(function(use)
 
     use "lukas-reineke/indent-blankline.nvim"
 
+    -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
+
 end)
