@@ -131,6 +131,7 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/vim-be-good'
 
     use "lukas-reineke/indent-blankline.nvim"
+    use 'mfussenegger/nvim-dap'
 
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
