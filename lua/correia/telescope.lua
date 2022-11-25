@@ -89,6 +89,10 @@ vim.keymap.set('n', '<Leader>o', function()
     })
 end)
 
+vim.keymap.set('n', '<Leader>gb', function()
+    builtin.git_branches()
+end)
+
 vim.keymap.set("n", "<Leader>p", function()
     telescope.extensions.file_browser.file_browser({
         path = "%:p:h",
