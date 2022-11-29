@@ -39,6 +39,9 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    -- use 'shaunsingh/nord.nvim'
+    -- use "joshdick/onedark.vim"
+    use "EdenEast/nightfox.nvim"
 
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
