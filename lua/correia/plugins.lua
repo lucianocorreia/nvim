@@ -33,16 +33,27 @@ packer.init({
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use 'folke/tokyonight.nvim'
-    use 'sainnhe/everforest'
+    -- use 'folke/tokyonight.nvim'
+    -- use 'sainnhe/everforest'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
     }
     -- use 'shaunsingh/nord.nvim'
     -- use "joshdick/onedark.vim"
-    use "EdenEast/nightfox.nvim"
-
+    -- use "EdenEast/nightfox.nvim"
+    -- Or with configuration
+    -- use({
+    --     'projekt0n/github-nvim-theme',
+    --     config = function()
+    --         require('github-theme').setup({
+    --             theme_style = "dark",
+    --             dark_float = true,
+    --             -- colors = { hint = "orange", error = "#ff0000" },
+    --         })
+    --     end
+    -- })
+    --
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
