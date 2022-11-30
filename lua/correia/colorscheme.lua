@@ -17,32 +17,31 @@
 -- vim.cmd [[colorscheme ayu]]
 -- vim.cmd [[colorscheme tokyonight-night]]
 
--- vim.g.everforest_background = 'hard'
--- vim.g.everforest_enable_italic = 1
--- vim.g.everforest_cursor = 'blue' -- `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green'`, `'aqua'`, `'blue'`, `'purple'`
--- vim.g.everforest_sign_column_background = 'grey' -- `'none'`, `'grey'`
--- vim.g.everforest_spell_foreground = 'colred' --  `'none'`, `'colored'`
--- vim.g.everforest_ui_contrast = 'hard' -- `'low'`, `'high'`
--- vim.g.everforest_colors_override = { bg0 = { '#21282c', '234' } } --{'bg0': ['#202020', '234'], 'bg2': ['#282828', '235']}
--- vim.cmd [[colorscheme everforest]]
+--  vim.g.everforest_background = 'hard'
+--  vim.g.everforest_enable_italic = 1
+--  vim.g.everforest_cursor = 'purple' -- `'auto'`, `'red'`, `'orange'`, `'yellow'`, `'green'`, `'aqua'`, `'blue'`, `'purple'`
+--  vim.g.everforest_sign_column_background = 'none' -- `'none'`, `'grey'`
+--  vim.g.everforest_spell_foreground = 'none' --  `'none'`, `'colored'`
+--  vim.g.everforest_ui_contrast = 'low' -- `'low'`, `'high'`
+-- -- vim.g.everforest_colors_override = { bg0 = { '#21282c', '234' } } --{'bg0': ['#202020', '234'], 'bg2': ['#282828', '235']}
+--  vim.cmd [[colorscheme everforest]]
 
 
 -- Example config in lua
--- vim.g.nord_contrast = true
--- vim.g.nord_borders = true
--- vim.g.nord_disable_background = false
--- vim.g.nord_italic = true
--- vim.g.nord_uniform_diff_background = true
--- vim.g.nord_bold = false
--- vim.cmd[[colorscheme nord]]
---
+--vim.g.nord_contrast = true
+--vim.g.nord_borders = true
+--vim.g.nord_disable_background = false
+--vim.g.nord_italic = true
+--vim.g.nord_uniform_diff_background = true
+--vim.g.nord_bold = false
+--vim.cmd[[colorscheme nord]]
 
 
-vim.cmd[[colorscheme nightfox]]
+-- vim.cmd[[colorscheme duskfox]]
 
 
 
--- vim.cmd [[colorscheme catppuccin-mocha]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
 --     flavour = "mocha",
 --     integrations = {
@@ -100,3 +99,4 @@ vim.cmd[[colorscheme nightfox]]
 --         fidget = true,
 --     },
 -- })
+
