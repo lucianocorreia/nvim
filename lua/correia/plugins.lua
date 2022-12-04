@@ -34,11 +34,12 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- use 'folke/tokyonight.nvim'
-    -- use 'sainnhe/everforest'
+    use 'sainnhe/everforest'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    use "lunarvim/darkplus.nvim"
     -- use 'shaunsingh/nord.nvim'
     -- use "joshdick/onedark.vim"
     -- use "EdenEast/nightfox.nvim"
