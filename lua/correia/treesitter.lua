@@ -37,6 +37,10 @@ parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
 
 
 require 'treesitter-context'.setup {
+    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+    throttle = true, -- Throttles plugin updates (may improve performance)
+    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+    show_all_context = true,
     patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
         -- For all filetypes
         -- Note that setting an entry here replaces all other patterns for this entry.

@@ -102,6 +102,30 @@ vim.keymap.set("n", "<Leader>p", function()
         grouped = true,
         previewer = false,
         -- initial_mode = "normal",
-        layout_config = { height = 30 } ,
+        layout_config = { height = 30 },
+    })
+end)
+
+-- load refactoring Telescope extension
+require("telescope").load_extension("refactoring")
+vim.api.nvim_set_keymap(
+    "v",
+    "<leader>rr",
+    "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+    { noremap = true }
+)
+
+require("telescope").load_extension('harpoon')
+vim.keymap.set("n", "<Leader>re", function()
+    telescope.extensions.harpoon.marks({
+        previewer = false,
+        -- initial_mode = "normal",
+        layout_config = { height = 20, width = 90 },
+    })
+end)
+
+vim.keymap.set("n", "<Leader>gt", function()
+    builtin.git_status({
+        -- layout_config = { height = 20, width = 90 },
     })
 end)

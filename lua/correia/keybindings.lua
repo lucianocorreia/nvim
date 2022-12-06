@@ -91,3 +91,19 @@ vim.keymap.set("n", "<Leader>gs", function()
     require('neogit').open()
 end, { desc = "Neogit open" })
 
+-- undotree
+keymap('n', '<F5>', ':UndotreeToggle<CR>', { noremap = true, silent = true })
+
+-- harpoon
+vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end, opts)
+vim.keymap.set("n", "<C-e>", function() require("harpoon.ui").toggle_quick_menu() end, opts)
+
+-- vim.keymap.set("n", "<C-1>", function() require("harpoon.ui").nav_file(1) end, opts)
+-- vim.keymap.set("n", "<C-2>", function() require("harpoon.ui").nav_file(2) end, opts)
+-- vim.keymap.set("n", "<C-3>", function() require("harpoon.ui").nav_file(3) end, opts)
+-- vim.keymap.set("n", "<C-4>", function() require("harpoon.ui").nav_file(4) end, opts)
+
+-- vim.keymap.set("n", "<leader>re", function() require("refactoring").refactor("Extract Function") end, opts)
+-- vim.keymap.set("n", "<leader>re", function() require("refactoring").refactor("Extract Variable") end, opts)
+
+

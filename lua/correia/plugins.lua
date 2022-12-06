@@ -40,34 +40,25 @@ return require('packer').startup(function(use)
         as = "catppuccin",
     }
     use "lunarvim/darkplus.nvim"
-    -- use 'shaunsingh/nord.nvim'
-    -- use "joshdick/onedark.vim"
-    -- use "EdenEast/nightfox.nvim"
-    -- Or with configuration
-    -- use({
-    --     'projekt0n/github-nvim-theme',
-    --     config = function()
-    --         require('github-theme').setup({
-    --             theme_style = "dark",
-    --             dark_float = true,
-    --             -- colors = { hint = "orange", error = "#ff0000" },
-    --         })
-    --     end
-    -- })
-    --
+    use "mbbill/undotree"
+
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
     use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
     use "akinsho/bufferline.nvim" --buffer (tabs)
 
     --Treesitter
-    use "nvim-treesitter/nvim-treesitter" --Syntax highlighting
+    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use 'nvim-treesitter/nvim-treesitter-context'
 
     -- telescope
     use 'kyazdani42/nvim-web-devicons' -- icons
     use 'nvim-telescope/telescope.nvim' -- telescopr
     use 'nvim-telescope/telescope-file-browser.nvim'
+
+    use("ThePrimeagen/git-worktree.nvim")
+    use("ThePrimeagen/harpoon")
+    use("ThePrimeagen/refactoring.nvim")
 
     -- go lang
     use 'fatih/vim-go'
@@ -146,7 +137,10 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/vim-be-good'
 
     use "lukas-reineke/indent-blankline.nvim"
-    use 'mfussenegger/nvim-dap'
+
+    use("mfussenegger/nvim-dap")
+    use("rcarriga/nvim-dap-ui")
+    use("theHamsta/nvim-dap-virtual-text")
 
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
