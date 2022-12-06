@@ -33,13 +33,13 @@ packer.init({
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use 'folke/tokyonight.nvim'
+    use 'folke/tokyonight.nvim'
     use 'sainnhe/everforest'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
     }
-    use "lunarvim/darkplus.nvim"
+
     use "mbbill/undotree"
 
     use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
