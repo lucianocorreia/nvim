@@ -1,5 +1,18 @@
 vim.cmd [[colorscheme tokyonight-storm]]
 
+require("tokyonight").setup({
+    -- use the night style
+    style = "storm",
+    -- disable italic for functions
+    sidebars = { "qf", "vista_kind", "terminal", "packer" },
+    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+    on_colors = function(colors)
+        -- colors.hint = colors.orange
+        -- colors.error = "#ff0000"
+        colors.comment = "#6d77a6"
+    end
+})
+
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
 --     flavour = "mocha",
@@ -96,4 +109,5 @@ function ColorMyPencils()
     })
 
 end
+
 ColorMyPencils()
