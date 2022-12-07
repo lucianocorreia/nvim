@@ -8,7 +8,7 @@ require("tokyonight").setup({
     -- Change the "hint" color to the "orange" color, and make the "error" color bright red
     on_colors = function(colors)
         -- colors.hint = colors.orange
-        -- colors.error = "#ff0000"
+        colors.error = "#db4b4b"
         colors.comment = "#6d77a6"
         colors.hint = "#226154"
     end,
@@ -131,7 +131,7 @@ require("tokyonight").setup({
 function ColorMyPencils()
     vim.g.tokyonight_transparent_sidebar = true
     vim.g.tokyonight_transparent = true
-    -- vim.opt.background = "dark"
+    vim.opt.background = "dark"
 
     -- vim.cmd("colorscheme " .. vim.g.theprimeagen_colorscheme)
 
