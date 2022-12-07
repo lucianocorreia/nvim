@@ -63,7 +63,9 @@ vim.keymap.set('n', '<Leader>s', function()
 end)
 
 vim.keymap.set('n', '<Leader>b', function()
-    builtin.buffers()
+    builtin.buffers({
+        theme = "dropdown"
+    })
 end)
 
 -- vim.keymap.set('n', ';t', function()
@@ -90,7 +92,9 @@ vim.keymap.set('n', '<Leader>o', function()
 end)
 
 vim.keymap.set('n', '<Leader>gb', function()
-    builtin.git_branches()
+    builtin.git_branches({
+        theme = "dropdown"
+    })
 end)
 
 vim.keymap.set("n", "<Leader>p", function()
