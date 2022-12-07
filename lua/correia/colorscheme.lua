@@ -10,23 +10,34 @@ require("tokyonight").setup({
         -- colors.hint = colors.orange
         -- colors.error = "#ff0000"
         colors.comment = "#6d77a6"
-    end
+        colors.hint = "#226154"
+    end,
+    on_highlights = function(highlights, colors)
+        highlights.DiagnosticVirtualTextHint = {
+            fg = "#226154"
+        }
+        highlights.DiagnosticVirtualTextError = {
+            fg = "#db4b4b"
+        }
+
+    end,
+
 })
 
 -- require('rose-pine').setup({
 -- 	--- @usage 'main' | 'moon'
--- 	dark_variant = 'moon',
+-- 	dark_variant = 'main',
 -- 	bold_vert_split = false,
 -- 	dim_nc_background = false,
 -- 	disable_background = false,
 -- 	disable_float_background = false,
--- 	disable_italics = false,
+-- 	disable_italics = true,
 --
 -- 	--- @usage string hex value or named color from rosepinetheme.com/palette
 -- 	groups = {
 -- 		background = 'base',
 -- 		panel = 'surface',
--- 		border = 'highlight_med',
+-- 		border = 'highlight_high',
 -- 		comment = 'muted',
 -- 		link = 'iris',
 -- 		punctuation = 'subtle',
@@ -56,6 +67,7 @@ require("tokyonight").setup({
 --
 -- -- set colorscheme after options
 -- vim.cmd('colorscheme rose-pine')
+
 --
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
@@ -119,7 +131,7 @@ require("tokyonight").setup({
 function ColorMyPencils()
     vim.g.tokyonight_transparent_sidebar = true
     vim.g.tokyonight_transparent = true
-    vim.opt.background = "dark"
+    -- vim.opt.background = "dark"
 
     -- vim.cmd("colorscheme " .. vim.g.theprimeagen_colorscheme)
 

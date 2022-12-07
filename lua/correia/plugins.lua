@@ -39,13 +39,10 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
-    -- use({
-    --     'rose-pine/neovim',
-    --     as = 'rose-pine',
-    --     config = function()
-    --         vim.cmd('colorscheme rose-pine')
-    --     end
-    -- })
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+    })
 
     use "mbbill/undotree"
 
