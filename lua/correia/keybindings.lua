@@ -68,7 +68,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
 
 -- Todo comments
-keymap('n', '<Leader>t', ':TodoLocList<CR>', { noremap = true, silent = true })
+keymap('n', '<Leader>td', ':TodoLocList<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "]t", function()
     require("todo-comments").jump_next()
 end, { desc = "Next todo comment" })
