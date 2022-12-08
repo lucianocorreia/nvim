@@ -106,4 +106,8 @@ vim.keymap.set("n", "<C-e>", function() require("harpoon.ui").toggle_quick_menu(
 -- vim.keymap.set("n", "<leader>re", function() require("refactoring").refactor("Extract Function") end, opts)
 -- vim.keymap.set("n", "<leader>re", function() require("refactoring").refactor("Extract Variable") end, opts)
 
+-- togletem
+-- keymap("n", "<Leader>tt", ":ToggleTerm<CR>", opts)
 
+-- Neoformat
+keymap("n", "<Leader>nf", ":Neoformat<CR>", opts)
