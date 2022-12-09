@@ -26,3 +26,15 @@ for _, server in pairs(servers) do
     end
     lspconfig[server].setup(opts)
 end
+
+require 'lsp_extensions'.inlay_hints {
+    highlight = "Comment",
+    prefix = " > ",
+    aligned = false,
+    only_current_line = false,
+    enabled = { "ChainingHint" }
+}
+
+vim.keymap.set("n", "<C-i>", function()
+    require 'lsp_extensions'.inlay_hints()
+end, { desc = "Next todo comment" })
