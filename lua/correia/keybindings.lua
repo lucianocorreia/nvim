@@ -88,6 +88,7 @@ keymap("n", "<Leader>,", ":GoAddTags<CR>", opts)
 
 -- GIT
 keymap("n", "<Leader>gs", ":Git<CR>", opts)
+keymap("n", "<Leader>gp", ":Git push<CR>", opts)
 -- vim.keymap.set("n", "<Leader>gs", function()
 --     require('neogit').open()
 -- end, { desc = "git open" })
