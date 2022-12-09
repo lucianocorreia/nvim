@@ -79,6 +79,18 @@ return require('packer').startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
     use "hrsh7th/cmp-nvim-lsp-signature-help"
+    use 'nvim-lua/lsp_extensions.nvim'
+    -- use({
+    --     "glepnir/lspsaga.nvim",
+    --     branch = "main",
+    --     config = function()
+    --         local saga = require("lspsaga")
+    --
+    --         saga.init_lsp_saga({
+    --             -- your configuration
+    --         })
+    --     end,
+    -- })
 
     use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
@@ -132,7 +144,8 @@ return require('packer').startup(function(use)
     }
 
     use 'norcalli/nvim-colorizer.lua'
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use("tpope/vim-fugitive")
+    -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
     -- use "ThePrimeagen/harpoon"
     use 'ThePrimeagen/vim-be-good'
