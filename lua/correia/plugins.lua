@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
-    use("gruvbox-community/gruvbox")
 
     use "mbbill/undotree"
 
