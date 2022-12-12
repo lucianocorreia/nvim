@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     use "mbbill/undotree"
 
@@ -73,13 +72,15 @@ return require('packer').startup(function(use)
 
     --cmp plugins
     use "hrsh7th/nvim-cmp" -- completion plugin
+    use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "hrsh7th/cmp-buffer" -- buffer completions
     use "hrsh7th/cmp-path" -- path completions
-    use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
     use "hrsh7th/cmp-nvim-lsp-signature-help"
     use 'nvim-lua/lsp_extensions.nvim'
+    use "onsails/lspkind.nvim"
+
     -- use({
     --     "glepnir/lspsaga.nvim",
     --     branch = "main",
