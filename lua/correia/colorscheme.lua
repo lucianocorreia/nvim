@@ -1,27 +1,27 @@
 vim.cmd [[colorscheme tokyonight-night]]
 
--- require("tokyonight").setup({
---     -- use the night style
---     tyle = "night",
---     -- disable italic for functions
---     sidebars = { "qf", "vista_kind", "terminal", "packer" },
---     -- Change the "hint" color to the "orange" color, and make the "error" color bright red
---     on_colors = function(colors)
---         -- colors.hint = colors.orange
---         colors.error = "#db4b4b"
---         colors.comment = "#6d77a6"
---         colors.hint = "#226154"
---     end,
---     on_highlights = function(highlights, colors)
---         highlights.DiagnosticVirtualTextHint = {
---             fg = "#226154"
---         }
---         highlights.DiagnosticVirtualTextError = {
---             fg = "#db4b4b"
---         }
---
---     end,
--- })
+require("tokyonight").setup({
+    -- use the night style
+    tyle = "night",
+    -- disable italic for functions
+    sidebars = { "qf", "vista_kind", "terminal", "packer" },
+    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+    on_colors = function(colors)
+        -- colors.hint = colors.orange
+        colors.error = "#db4b4b"
+        colors.comment = "#6d77a6"
+        colors.hint = "#226154"
+    end,
+    on_highlights = function(highlights, colors)
+        highlights.DiagnosticVirtualTextHint = {
+            fg = "#226154",
+        }
+        highlights.DiagnosticVirtualTextError = {
+            fg = "#db4b4b"
+        }
+
+    end,
+})
 
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
@@ -129,9 +129,9 @@ vim.cmd [[colorscheme tokyonight-night]]
 -- vim.cmd('colorscheme rose-pine')
 
 function fixColors()
-    -- vim.g.tokyonight_transparent_sidebar = false
-    -- vim.g.tokyonight_transparent = false
-    -- vim.opt.background = "dark"
+    vim.g.tokyonight_transparent_sidebar = false
+    vim.g.tokyonight_transparent = false
+    vim.opt.background = "dark"
 
     -- vim.cmd("colorscheme " .. vim.g.theprimeagen_colorscheme)
 
@@ -139,30 +139,30 @@ function fixColors()
         vim.api.nvim_set_hl(0, thing, opts)
     end
 
-    -- hl("SignColumn", {
-    --     bg = "none",
-    -- })
+    hl("SignColumn", {
+        bg = "none",
+    })
 
     hl("ColorColumn", {
         ctermbg = 0,
         bg = "#2B79A0",
     })
 
-    -- hl("CursorLineNR", {
-    --     bg = "None"
-    -- })
-    --
-    -- hl("Normal", {
-    --     bg = "none"
-    -- })
+    hl("CursorLineNR", {
+        bg = "None"
+    })
+
+    hl("Normal", {
+        bg = "none"
+    })
 
     hl("LineNr", {
         fg = "#89B4FA"
     })
 
-    -- hl("netrwDir", {
-    --     fg = "#89B4FA"
-    -- })
+    hl("netrwDir", {
+        fg = "#89B4FA"
+    })
 
 end
 
