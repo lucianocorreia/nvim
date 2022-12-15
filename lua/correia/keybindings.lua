@@ -84,7 +84,10 @@ keymap('n', '<Leader>z', ':bw<CR>', { noremap = true, silent = true })
 keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 
 -- vim go add tags
-keymap("n", "<Leader>,", ":GoAddTags<CR>", opts)
+keymap("n", "<Leader>aa", ":GoAddTags<CR>", opts)
+keymap("n", "<Leader>ae", ":GoIfErr<CR>", opts)
+keymap("n", "<Leader>as", ":GoFillStruct<CR>", opts)
+keymap("n", "<Leader>at", ":GoTestFunc<CR>", opts)
 
 -- GIT
 keymap("n", "<Leader>gs", ":Git<CR>", opts)
