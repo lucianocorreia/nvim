@@ -101,9 +101,9 @@ end)
 --     builtin.diagnostics()
 -- end)
 --
--- vim.keymap.set('n', '<Leader>q', function()
---     builtin.quickfix()
--- end)
+vim.keymap.set('n', '<Leader>q', function()
+    builtin.quickfix()
+end)
 
 vim.keymap.set('n', '<Leader>o', function()
     builtin.lsp_document_symbols({
