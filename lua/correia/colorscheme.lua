@@ -23,6 +23,8 @@ require("tokyonight").setup({
     end,
 })
 
+-- vim.cmd [[colorscheme gruvbox-material]]
+
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
 --     flavour = "mocha",

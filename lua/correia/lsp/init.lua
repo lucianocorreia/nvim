@@ -38,3 +38,5 @@ require 'lsp_extensions'.inlay_hints {
 vim.keymap.set("n", "<C-i>", function()
     require 'lsp_extensions'.inlay_hints()
 end, { desc = "Next todo comment" })
+
+require('fidget').setup()

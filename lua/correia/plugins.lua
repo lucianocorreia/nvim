@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    use 'sainnhe/gruvbox-material'
 
     use "mbbill/undotree"
 
@@ -48,13 +49,23 @@ return require('packer').startup(function(use)
     use "akinsho/bufferline.nvim" --buffer (tabs)
 
     --Treesitter
-    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use { -- Highlight, edit, and navigate code
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            pcall(require('nvim-treesitter.install').update { with_sync = true })
+        end,
+    }
     use 'nvim-treesitter/nvim-treesitter-context'
+    use { -- Additional text objects via treesitter
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        after = 'nvim-treesitter',
+    }
 
     -- telescope
     use 'kyazdani42/nvim-web-devicons' -- icons
     use 'nvim-telescope/telescope.nvim' -- telescopr
     use 'nvim-telescope/telescope-file-browser.nvim'
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
     use("ThePrimeagen/git-worktree.nvim")
     use("ThePrimeagen/harpoon")
@@ -80,6 +91,7 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-nvim-lsp-signature-help"
     use 'nvim-lua/lsp_extensions.nvim'
     use "onsails/lspkind.nvim"
+    use 'j-hui/fidget.nvim'
 
     -- use({
     --     "glepnir/lspsaga.nvim",
