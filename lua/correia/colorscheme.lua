@@ -23,7 +23,8 @@ require("tokyonight").setup({
     end,
 })
 
--- vim.cmd [[colorscheme gruvbox-material]]
+--Lua:
+-- vim.cmd[[colorscheme nord]]
 
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
@@ -134,8 +135,6 @@ function fixColors()
     vim.g.tokyonight_transparent_sidebar = false
     vim.g.tokyonight_transparent = false
     vim.opt.background = "dark"
-
-    -- vim.cmd("colorscheme " .. vim.g.theprimeagen_colorscheme)
 
     local hl = function(thing, opts)
         vim.api.nvim_set_hl(0, thing, opts)
