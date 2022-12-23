@@ -23,8 +23,54 @@ require("tokyonight").setup({
     end,
 })
 
---Lua:
--- vim.cmd[[colorscheme nord]]
+-- -- Everforest
+-- vim.g.everforest_background = "hard"
+-- vim.cmd [[colorscheme everforest]]
+
+-- require('rose-pine').setup({
+-- 	--- @usage 'main' | 'moon'
+-- 	dark_variant = 'moon',
+-- 	bold_vert_split = false,
+-- 	dim_nc_background = false,
+-- 	disable_background = false,
+-- 	disable_float_background = false,
+-- 	disable_italics = true,
+--
+-- 	--- @usage string hex value or named color from rosepinetheme.com/palette
+-- 	groups = {
+-- 		background = 'base',
+-- 		panel = 'surface',
+-- 		border = 'highlight_med',
+-- 		comment = 'muted',
+-- 		link = 'iris',
+-- 		punctuation = 'subtle',
+--
+-- 		error = 'love',
+-- 		hint = 'iris',
+-- 		info = 'foam',
+-- 		warn = 'gold',
+--
+-- 		headings = {
+-- 			h1 = 'iris',
+-- 			h2 = 'foam',
+-- 			h3 = 'rose',
+-- 			h4 = 'gold',
+-- 			h5 = 'pine',
+-- 			h6 = 'foam',
+-- 		}
+-- 		-- or set all headings at once
+-- 		-- headings = 'subtle'
+-- 	},
+--
+-- 	-- Change specific vim highlight groups
+-- 	highlight_groups = {
+-- 		ColorColumn = { bg = 'rose' }
+-- 	}
+-- })
+--
+-- -- set colorscheme after options
+-- vim.cmd('colorscheme rose-pine')
+--
 
 -- vim.cmd [[colorscheme catppuccin-mocha]]
 -- require("catppuccin").setup({
@@ -131,7 +177,7 @@ require("tokyonight").setup({
 -- -- set colorscheme after options
 -- vim.cmd('colorscheme rose-pine')
 
-function fixColors()
+function FixColors()
     vim.g.tokyonight_transparent_sidebar = false
     vim.g.tokyonight_transparent = false
     vim.opt.background = "dark"
@@ -159,12 +205,14 @@ function fixColors()
 
     hl("LineNr", {
         fg = "#89B4FA"
+        -- fg = "#31748f"
     })
 
     hl("netrwDir", {
         fg = "#89B4FA"
+        -- fg = "#31748f"
     })
 
 end
 
-fixColors()
+FixColors()

@@ -15,7 +15,7 @@ require "correia.lualine"
 require "correia.gitsigns"
 require "correia.comments"
 require "correia.prettier"
--- require "correia.blankline"
+require "correia.blankline"
 require "correia.bufferline"
 
 require "correia.mason"

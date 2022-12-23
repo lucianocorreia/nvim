@@ -39,6 +39,12 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+    })
+    use "rebelot/kanagawa.nvim"
+    -- Install without configuration
 
     use "mbbill/undotree"
 
@@ -78,7 +84,6 @@ return require('packer').startup(function(use)
     use "windwp/nvim-autopairs" --autopairs
     use "numToStr/Comment.nvim"
     use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-    --use "lukas-reineke/indent-blankline.nvim"
 
     --cmp plugins
     use "hrsh7th/nvim-cmp" -- completion plugin
