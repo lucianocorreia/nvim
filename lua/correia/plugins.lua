@@ -39,12 +39,11 @@ return require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    use "sainnhe/gruvbox-material"
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
     })
-    use "rebelot/kanagawa.nvim"
-    -- Install without configuration
 
     use "mbbill/undotree"
 
