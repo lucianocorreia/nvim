@@ -118,3 +118,6 @@ vim.keymap.set("n", "<C-e>", function() require("harpoon.ui").toggle_quick_menu(
 
 -- Neoformat
 keymap("n", "<Leader>nf", ":Neoformat<CR>", opts)
+
+-- nvim tree
+keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)

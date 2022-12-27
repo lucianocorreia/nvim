@@ -174,6 +174,13 @@ return require('packer').startup(function(use)
 
     use 'sbdchd/neoformat'
 
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+    }
+
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
 end)
