@@ -22,6 +22,7 @@ require "correia.mason"
 require "correia.cmp"
 require "correia.lsp"
 require "correia.null-ls"
+-- require "correia.rust-tools"
 
 require "correia.toggleterm"
 require "correia.colorizer"

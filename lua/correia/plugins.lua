@@ -92,10 +92,17 @@ return require('packer').startup(function(use)
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
     use "hrsh7th/cmp-nvim-lsp-signature-help"
-    use 'nvim-lua/lsp_extensions.nvim'
     use "onsails/lspkind.nvim"
     use 'j-hui/fidget.nvim'
-
+    -- use 'simrat39/rust-tools.nvim'
+    use {
+        'saecki/crates.nvim',
+        tag = 'v0.3.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
     -- use({
     --     "glepnir/lspsaga.nvim",
     --     branch = "main",

@@ -116,6 +116,7 @@ cmp.setup {
         { name = "path" },
         { name = 'nvim_lsp_signature_help' },
         { name = 'cmp_tabnine' },
+        { name = 'crates' },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,

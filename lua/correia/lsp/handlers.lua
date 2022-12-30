@@ -82,11 +82,10 @@ local function lsp_keymaps(bufnr)
     -- vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>ff", "<cmd>lua vim.lsp.range.format{async=true}<<CR>", opts)
 
     vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=true}' ]])
+
 end
 
 M.on_attach = function(client, bufnr)
-    -- vim.notify(client.name .. " starting...")
-    -- TODO: refactor this into a method that checks if string in list
     if client.name == "tsserver" then
         client.server_capabilities.document_formatting = false
     end

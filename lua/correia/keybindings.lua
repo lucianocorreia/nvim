@@ -121,3 +121,11 @@ keymap("n", "<Leader>nf", ":Neoformat<CR>", opts)
 
 -- nvim tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+
+
+--rust 
+keymap("n", "<Leader>uu", ":RustRun<CR>", opts)
+-- vim.keymap.set("n", "<leader>um", function() require('rust-tools').expand_macro.expand_macro() end, opts)
+-- vim.keymap.set("n", "<leader>ui", function() require('rust-tools').inlay_hints.enable() end, opts)
+-- vim.keymap.set("n", "<leader>um", function() require'rust-tools'.expand_macro.expand_macro() end, opts)
+
