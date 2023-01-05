@@ -46,15 +46,15 @@ M.setup = function()
     })
 end
 
-local function lsp_highlight_document(client)
-    -- Set autocommands conditional on server_capabilities
-    local status_ok, illuminate = pcall(require, "illuminate")
-    if not status_ok then
-        return
-    end
-    illuminate.on_attach(client)
-    -- end
-end
+-- local function lsp_highlight_document(client)
+--     -- Set autocommands conditional on server_capabilities
+--     local status_ok, illuminate = pcall(require, "illuminate")
+--     if not status_ok then
+--         return
+--     end
+--     illuminate.on_attach(client)
+--     -- end
+-- end
 
 local function lsp_keymaps(bufnr)
     local opts = { noremap = true, silent = true }
@@ -101,7 +101,7 @@ M.on_attach = function(client, bufnr)
     --     ]])
 
     -- Set autocommands conditional on server_capabilities
-    if client.name ~= "tailwindcss" then
+    if client.name ~= "tailwindcss" and client.name ~= "jsonls"  then
         vim.cmd([[
             augroup lsp_document_highlight
                 autocmd! * <buffer>
