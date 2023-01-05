@@ -90,7 +90,43 @@ M.on_attach = function(client, bufnr)
         client.server_capabilities.document_formatting = false
     end
     lsp_keymaps(bufnr)
-    lsp_highlight_document(client)
+    -- lsp_highlight_document(client)
+
+    -- vim.cmd([[
+    --         augroup formatting
+    --             autocmd! * <buffer>
+    --             autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+    --             autocmd BufWritePre <buffer> lua OrganizeImports(1000)
+    --         augroup END
+    --     ]])
+
+    -- Set autocommands conditional on server_capabilities
+    if client.name ~= "tailwindcss" then
+        vim.cmd([[
+            augroup lsp_document_highlight
+                autocmd! * <buffer>
+                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+            augroup END
+        ]])
+    end
+end
+
+-- organize imports
+-- https://github.com/neovim/nvim-lspconfig/issues/115#issuecomment-902680058
+function OrganizeImports(timeoutms)
+    local params = vim.lsp.util.make_range_params()
+    params.context = { only = { "source.organizeImports" } }
+    local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, timeoutms)
+    for _, res in pairs(result or {}) do
+        for _, r in pairs(res.result or {}) do
+            if r.edit then
+                vim.lsp.util.apply_workspace_edit(r.edit, "UTF-8")
+            else
+                vim.lsp.buf.execute_command(r.command)
+            end
+        end
+    end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
