@@ -8,7 +8,7 @@ require("correia.lsp.handlers").setup()
 local lspconfig = require("lspconfig")
 
 local servers = { "jsonls", "sumneko_lua", "intelephense", "tsserver", "rust_analyzer", "vuels", "tailwindcss", "gopls",
-    "sqls", "bufls", "dockerls", "yamlls", "golangci_lint_ls" }
+    "sqls", "bufls", "dockerls", "yamlls" }
 
 for _, server in pairs(servers) do
     local opts = {
@@ -28,18 +28,18 @@ for _, server in pairs(servers) do
 end
 
 -- Go lang LINT
-lspconfig.golangci_lint_ls.setup {
-    on_attach = require("correia.lsp.handlers").on_attach,
-    capabilities = require("correia.lsp.handlers").capabilities,
-    settings = {
-        gopls = {
-            gofumpt = true,
-        },
-    },
-    flags = {
-        debounce_text_changes = 150,
-    },
-}
+-- lspconfig.golangci_lint_ls.setup {
+--     on_attach = require("correia.lsp.handlers").on_attach,
+--     capabilities = require("correia.lsp.handlers").capabilities,
+--     settings = {
+--         gopls = {
+--             gofumpt = true,
+--         },
+--     },
+--     flags = {
+--         debounce_text_changes = 150,
+--     },
+-- }
 
 vim.keymap.set("n", "<C-i>", function()
     -- require 'lsp_extensions'.inlay_hints()
