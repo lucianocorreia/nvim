@@ -33,13 +33,10 @@ packer.init({
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use 'folke/tokyonight.nvim'
-    use 'sainnhe/everforest'
     use {
         "catppuccin/nvim",
         as = "catppuccin",
     }
-    use "sainnhe/gruvbox-material"
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -94,7 +91,6 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-nvim-lsp-signature-help"
     use "onsails/lspkind.nvim"
     use 'j-hui/fidget.nvim'
-    -- use 'simrat39/rust-tools.nvim'
     use {
         'saecki/crates.nvim',
         tag = 'v0.3.0',
