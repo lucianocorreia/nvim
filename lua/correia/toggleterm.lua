@@ -6,5 +6,6 @@ require("toggleterm").setup {
             return vim.o.columns * 0.4
         end
     end,
+    direction = "float",
     open_mapping = [[<C-\>]],
 }
