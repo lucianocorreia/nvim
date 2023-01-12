@@ -28,10 +28,10 @@ keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<S-Up>", ":resize -2<CR>", opts)
+keymap("n", "<S-Down>", ":resize +2<CR>", opts)
+keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -124,8 +124,8 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 --rust 
 keymap("n", "<Leader>uu", ":RustRun<CR>", opts)
-keymap("n", "<Leader>ub", ":TermExec cmd=\"cargo build\"<CR>", opts)
-keymap("n", "<Leader>ur", ":TermExec cmd=\"cargo run\"<CR>", opts)
+keymap("n", "<Leader>ub", ":TermExec cmd=\"clear && cargo build\"<CR>", opts)
+keymap("n", "<Leader>ur", ":TermExec cmd=\"clear && cargo run\"<CR>", opts)
 keymap("n", "<Leader>ut", ":TermExec cmd=\"cargo test\"<CR>", opts)
 -- vim.keymap.set("n", "<leader>um", function() require('rust-tools').expand_macro.expand_macro() end, opts)
 -- vim.keymap.set("n", "<leader>ui", function() require('rust-tools').inlay_hints.enable() end, opts)
