@@ -100,6 +100,7 @@ return require('packer').startup(function(use)
             require('crates').setup()
         end,
     }
+    -- use("simrat39/rust-tools.nvim")
     -- use({
     --     "glepnir/lspsaga.nvim",
     --     branch = "main",
@@ -168,7 +169,7 @@ return require('packer').startup(function(use)
     -- use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
     -- use "ThePrimeagen/harpoon"
-    use 'ThePrimeagen/vim-be-good'
+    -- use 'ThePrimeagenvim-be-good'
 
     use "lukas-reineke/indent-blankline.nvim"
 
