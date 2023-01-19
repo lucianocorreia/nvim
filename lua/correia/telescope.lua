@@ -97,10 +97,10 @@ vim.keymap.set('n', '<Leader>\\', function()
     telescope.extensions.projects.projects {}
 end)
 
--- vim.keymap.set('n', '<Leader>e', function()
---     builtin.diagnostics()
--- end)
---
+vim.keymap.set('n', '<Leader>dd', function()
+    builtin.diagnostics()
+end)
+
 vim.keymap.set('n', '<Leader>q', function()
     builtin.quickfix()
 end)
