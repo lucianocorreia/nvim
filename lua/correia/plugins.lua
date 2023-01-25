@@ -159,7 +159,7 @@ return require('packer').startup(function(use)
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
-                patterns = { "Makefile", "build/env.sh", "go.mod", "package.json", "composer.json" }
+                patterns = { "Makefile", "build/env.sh", "cargo.toml", "go.mod", "package.json", "composer.json" }
             }
         end
     }
@@ -184,6 +184,13 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
+    }
+
+    use { "ellisonleao/glow.nvim",
+        config = function()
+            require('glow').setup({
+            })
+        end
     }
 
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
