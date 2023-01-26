@@ -101,7 +101,7 @@ M.on_attach = function(client, bufnr)
     --     ]])
 
     -- Set autocommands conditional on server_capabilities
-    if client.name ~= "tailwindcss" and client.name ~= "jsonls"  then
+    if client.name ~= "tailwindcss" and client.name ~= "jsonls" and client.name ~= "dockerls" and client.name ~= "yamlls" then
         vim.cmd([[
             augroup lsp_document_highlight
                 autocmd! * <buffer>
