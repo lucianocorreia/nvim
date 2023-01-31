@@ -25,7 +25,9 @@ ts.setup {
         "rust",
         "vue",
         "go",
-        "sql"
+        "sql",
+        "svelte",
+        "scss"
     },
     autotag = {
         enable = true,

@@ -3,9 +3,11 @@
 -- setup configuration.
 require 'colorizer'.setup({
     '*', -- Highlight all files, but customize some others.
-    css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
+    -- css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
     html = { names = false; } -- Disable parsing "names" like Blue or Gray
 }, {
-    names = false,
+    mode   = 'background',
+    css    = true; -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+    css_fn = true;
+    names  = true,
 })
-
