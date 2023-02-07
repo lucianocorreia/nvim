@@ -100,6 +100,10 @@ return require('packer').startup(function(use)
             require('crates').setup()
         end,
     }
+    -- use {
+    --     "SmiteshP/nvim-navic",
+    --     requires = "neovim/nvim-lspconfig"
+    -- }
     -- use("simrat39/rust-tools.nvim")
     -- use({
     --     "glepnir/lspsaga.nvim",
