@@ -121,7 +121,7 @@ keymap("n", "<Leader>nf", ":Neoformat<CR>", opts)
 -- nvim tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
---rust 
+--rust
 keymap("n", "<Leader>uu", ":RustRun<CR>", opts)
 keymap("n", "<Leader>ub", ":TermExec cmd=\"clear && cargo build\"<CR>", opts)
 keymap("n", "<Leader>ur", ":TermExec cmd=\"clear && cargo run\"<CR>", opts)
@@ -133,6 +133,6 @@ keymap("n", "<Leader>ut", ":TermExec cmd=\"cargo test\"<CR>", opts)
 -- Markdown
 keymap("n", "<Leader>mk", ":Glow<CR>", opts)
 
-
 -- form html selectedit
-vim.api.nvim_set_keymap( 'n', '<F7>', 'vi{:! prettier --parser html --tab-width 4 --stdin-filepath<CR>vi{>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<F7>', 'vi{:! prettier --parser html --tab-width 4 --stdin-filepath<CR>vi{>',
+    { noremap = true })

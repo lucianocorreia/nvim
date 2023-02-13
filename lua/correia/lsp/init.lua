@@ -7,8 +7,8 @@ require("correia.lsp.handlers").setup()
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "intelephense", "tsserver", "rust_analyzer", "vuels", "tailwindcss", "gopls",
-    "sqls", "bufls", "dockerls", "yamlls", "svelte", "cssls", "html" }
+local servers = { "jsonls", "lua_ls", "intelephense", "tsserver", "rust_analyzer", "vuels", "tailwindcss", "gopls",
+    "sqls", "bufls", "dockerls", "yamlls", "svelte", "cssls", "html", "omnisharp" }
 
 for _, server in pairs(servers) do
     local opts = {

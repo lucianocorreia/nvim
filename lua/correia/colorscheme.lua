@@ -172,6 +172,6 @@ function FixColors()
 end
 
 -- ConfigureCatppuccin()
-ConfigRosePine()
--- ConfigureKanagawa()
+-- ConfigRosePine()
+ConfigureKanagawa()
 

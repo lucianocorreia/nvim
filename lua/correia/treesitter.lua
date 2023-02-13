@@ -27,7 +27,7 @@ ts.setup {
         "go",
         "sql",
         "svelte",
-        "scss"
+        "scss",
     },
     autotag = {
         enable = true,
