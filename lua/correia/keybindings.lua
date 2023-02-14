@@ -27,6 +27,11 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
+-- next greatest remap ever : asbjornHaland
+-- vim.keymap.set("x", "<leader>v", [["_dP]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
 -- Resize with arrows
 keymap("n", "<S-Up>", ":resize -2<CR>", opts)
 keymap("n", "<S-Down>", ":resize +2<CR>", opts)
@@ -44,6 +49,7 @@ keymap("n", "<A-k>", "<Esc>:m .-3<CR>==gi", opts)
 -- Insert --
 -- Press jk fast to exit insert mode
 -- keymap("i", "jj", "<ESC>", opts)
+keymap("i", "<C-c>", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 keymap("i", "jj", "<ESC>A;<ESC>", opts);
 
@@ -80,8 +86,9 @@ end, { desc = "Previous todo comment" })
 -- close current buffer
 keymap('n', '<Leader>z', ':bw<CR>', { noremap = true, silent = true })
 
--- Save file
-keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+-- Save buffer
+-- keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 
 -- vim go add tags
 keymap("n", "<Leader>aa", ":GoAddTags<CR>", opts)
