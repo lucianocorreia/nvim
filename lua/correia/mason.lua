@@ -14,5 +14,5 @@ mason.setup({
 })
 
 lspconfig.setup {
-    ensure_installed = { "sumneko_lua", "tailwindcss", "intelephense", "tsserver", "vuels", "gopls", "sqls", "bufls", "dockerls", "svelte", "cssls" }
+    ensure_installed = { "lua_ls", "tailwindcss", "intelephense", "tsserver", "vuels", "gopls", "sqls", "bufls", "dockerls", "svelte", "cssls" }
 }
