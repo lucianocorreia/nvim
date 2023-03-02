@@ -89,6 +89,7 @@ keymap('n', '<Leader>z', ':bw<CR>', { noremap = true, silent = true })
 -- Save buffer
 -- keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+keymap('i', '<C-s>', '<ESC>:w<CR>', { noremap = true, silent = true })
 
 -- vim go add tags
 keymap("n", "<Leader>aa", ":GoAddTags<CR>", opts)

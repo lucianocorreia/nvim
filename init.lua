@@ -24,6 +24,8 @@ require "correia.lsp"
 require "correia.null-ls"
 -- require "correia.rust-tools"
 
+require "correia.dap"
+
 require "correia.toggleterm"
 require "correia.colorizer"
 -- require "correia.neogit"
