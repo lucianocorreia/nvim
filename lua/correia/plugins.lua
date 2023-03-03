@@ -62,6 +62,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter-textobjects',
         after = 'nvim-treesitter',
     }
+    -- use 'tree-sitter/tree-sitter-typescript'
 
     -- telescope
     use 'kyazdani42/nvim-web-devicons' -- icons
