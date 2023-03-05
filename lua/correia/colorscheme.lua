@@ -71,7 +71,6 @@ function ConfigRosePine()
         disable_background = false,
         disable_float_background = false,
         disable_italics = true,
-
         --- @usage string hex value or named color from rosepinetheme.com/palette
         groups = {
             background = 'base',
@@ -97,7 +96,6 @@ function ConfigRosePine()
             -- or set all headings at once
             -- headings = 'subtle'
         },
-
         -- Change specific vim highlight groups
         highlight_groups = {
             ColorColumn = { bg = 'rose' }
@@ -125,12 +123,17 @@ function ConfigureKanagawa()
         globalStatus = false, -- adjust window separators highlight for laststatus=3
         terminalColors = true, -- define vim.g.terminal_color_{0,17}
         colors = {},
-        overrides = {},
-        theme = "default" -- Load "default" theme or the experimental "light" theme
+        -- theme = "default" -- Load "default" theme or the experimental "light" theme
+        theme = "wave", -- Load "wave" theme when 'background' option is not set
+        background = { -- map the value of 'background' option to a theme
+            dark = "wave", -- try "dragon" !
+            light = "lotus"
+        },
     })
 
     -- setup must be called before loading
-    vim.cmd("colorscheme kanagawa")
+    -- vim.cmd("colorscheme kanagawa")
+    require("kanagawa").load("wave")
 end
 
 function FixColors()
@@ -168,10 +171,8 @@ function FixColors()
         fg = "#89B4FA"
         -- fg = "#31748f"
     })
-
 end
 
 -- ConfigureCatppuccin()
 -- ConfigRosePine()
 ConfigureKanagawa()
-
