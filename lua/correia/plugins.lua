@@ -129,6 +129,7 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use "jose-elias-alvarez/null-ls.nvim" --formatters and linters
+    use "jlcrochet/vim-razor"
 
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
