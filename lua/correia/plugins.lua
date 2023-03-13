@@ -33,15 +33,16 @@ packer.init({
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin",
-    }
+    -- use {
+    --     "catppuccin/nvim",
+    --     as = "catppuccin",
+    -- }
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
     })
     use "rebelot/kanagawa.nvim"
+    use { "ellisonleao/gruvbox.nvim" }
 
     use "mbbill/undotree"
 
@@ -202,5 +203,4 @@ return require('packer').startup(function(use)
     }
 
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
-
 end)

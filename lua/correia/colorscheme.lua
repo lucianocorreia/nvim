@@ -79,12 +79,10 @@ function ConfigRosePine()
             comment = 'muted',
             link = 'iris',
             punctuation = 'subtle',
-
             error = 'love',
             hint = 'iris',
             info = 'foam',
             warn = 'subtle',
-
             headings = {
                 h1 = 'iris',
                 h2 = 'foam',
@@ -116,16 +114,25 @@ function ConfigureKanagawa()
         statementStyle = { bold = false },
         typeStyle = {},
         variablebuiltinStyle = { italic = true },
-        specialReturn = true, -- special highlight for the return keyword
+        specialReturn = true,    -- special highlight for the return keyword
         specialException = true, -- special highlight for exception handling keywords
-        transparent = false, -- do not set background color
-        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-        globalStatus = false, -- adjust window separators highlight for laststatus=3
-        terminalColors = true, -- define vim.g.terminal_color_{0,17}
-        colors = {},
+        transparent = false,     -- do not set background color
+        dimInactive = false,     -- dim inactive window `:h hl-NormalNC`
+        globalStatus = false,    -- adjust window separators highlight for laststatus=3
+        terminalColors = true,   -- define vim.g.terminal_color_{0,17}
+        colors = {
+            theme = {
+                all = {
+                    ui = {
+                        bg_gutter = "none"
+                    }
+                }
+            }
+        },
         -- theme = "default" -- Load "default" theme or the experimental "light" theme
-        theme = "wave", -- Load "wave" theme when 'background' option is not set
-        background = { -- map the value of 'background' option to a theme
+        theme = "wave",    -- Load "wave" theme when 'background' option is not set
+        background = {
+                           -- map the value of 'background' option to a theme
             dark = "wave", -- try "dragon" !
             light = "lotus"
         },
@@ -173,6 +180,30 @@ function FixColors()
     })
 end
 
+function ConfigureGruvbox()
+    -- setup must be called before loading the colorscheme
+    -- Default options:
+    require("gruvbox").setup({
+        undercurl = true,
+        underline = false,
+        bold = true,
+        italic = true,
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true,    -- invert background for search, diffs, statuslines and errors
+        contrast = "hard", -- can be "hard", "soft" or empty string
+        palette_overrides = {},
+        overrides = {},
+        dim_inactive = false,
+        transparent_mode = false,
+    })
+    vim.cmd("colorscheme gruvbox")
+end
+
 -- ConfigureCatppuccin()
-ConfigRosePine()
--- ConfigureKanagawa()
+-- ConfigRosePine()
+ConfigureKanagawa()
+-- ConfigureGruvbox()
