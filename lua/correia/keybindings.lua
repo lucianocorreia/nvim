@@ -92,7 +92,7 @@ keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 keymap('i', '<C-s>', '<ESC>:w<CR>', { noremap = true, silent = true })
 
 -- better paste
-keymap('n', '<C-v>', 'yiw', { noremap = true, silent = true })
+keymap('n', '<C-y>', 'yiw', { noremap = true, silent = true })
 keymap('n', '<C-p>', 'viwp', { noremap = true, silent = true })
 
 -- vim go add tags

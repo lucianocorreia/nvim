@@ -130,9 +130,9 @@ function ConfigureKanagawa()
             }
         },
         -- theme = "default" -- Load "default" theme or the experimental "light" theme
-        theme = "wave",    -- Load "wave" theme when 'background' option is not set
+        theme = "wave", -- Load "wave" theme when 'background' option is not set
         background = {
-                           -- map the value of 'background' option to a theme
+            -- map the value of 'background' option to a theme
             dark = "wave", -- try "dragon" !
             light = "lotus"
         },
@@ -203,7 +203,25 @@ function ConfigureGruvbox()
     vim.cmd("colorscheme gruvbox")
 end
 
+function ConfigureOneDark()
+    require("onedarkpro").setup({
+        colors = {
+            red = "#FFFFFF"
+        }
+    })
+    vim.cmd("colorscheme onedark")
+end
+
+function ConfigureEverforest()
+    vim.g.everforest_background = 'hard'
+    vim.g.everforest_better_performance = 1
+
+    vim.cmd('colorscheme everforest')
+end
+
 -- ConfigureCatppuccin()
 -- ConfigRosePine()
 ConfigureKanagawa()
 -- ConfigureGruvbox()
+-- ConfigureOneDark()
+-- ConfigureEverforest()

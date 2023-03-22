@@ -37,19 +37,20 @@ return require('packer').startup(function(use)
     --     "catppuccin/nvim",
     --     as = "catppuccin",
     -- }
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-    })
+    -- use({
+    --     'rose-pine/neovim',
+    --     as = 'rose-pine',
+    -- })
     use "rebelot/kanagawa.nvim"
-    use { "ellisonleao/gruvbox.nvim" }
+    use { 'sainnhe/everforest' }
+    -- use "olimorris/onedarkpro.nvim"
 
     use "mbbill/undotree"
 
-    use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in neovim
-    use 'nvim-lua/plenary.nvim' -- Useful Lua functions used by many plugins
+    use 'nvim-lua/popup.nvim'       -- An implementation of the Popup API from vim in neovim
+    use 'nvim-lua/plenary.nvim'     -- Useful Lua functions used by many plugins
     use 'nvim-lualine/lualine.nvim' -- lualine
-    use "akinsho/bufferline.nvim" --buffer (tabs)
+    use "akinsho/bufferline.nvim"   --buffer (tabs)
 
     --Treesitter
     use { -- Highlight, edit, and navigate code
@@ -66,7 +67,7 @@ return require('packer').startup(function(use)
     -- use 'tree-sitter/tree-sitter-typescript'
 
     -- telescope
-    use 'kyazdani42/nvim-web-devicons' -- icons
+    use 'kyazdani42/nvim-web-devicons'  -- icons
     use 'nvim-telescope/telescope.nvim' -- telescopr
     use 'nvim-telescope/telescope-file-browser.nvim'
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
@@ -79,18 +80,18 @@ return require('packer').startup(function(use)
     use 'fatih/vim-go'
 
     -- Git, Comments, Autorpairs
-    use "lewis6991/gitsigns.nvim" --Git indication
-    use "windwp/nvim-autopairs" --autopairs
+    use "lewis6991/gitsigns.nvim"   --Git indication
+    use "windwp/nvim-autopairs"     --autopairs
     use "numToStr/Comment.nvim"
     use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
     --cmp plugins
-    use "hrsh7th/nvim-cmp" -- completion plugin
-    use "hrsh7th/cmp-cmdline" -- cmdline completions
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
+    use "hrsh7th/nvim-cmp"         -- completion plugin
+    use "hrsh7th/cmp-cmdline"      -- cmdline completions
+    use "hrsh7th/cmp-buffer"       -- buffer completions
+    use "hrsh7th/cmp-path"         -- path completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
-    use "hrsh7th/cmp-nvim-lsp" -- LSP completion for cmp
+    use "hrsh7th/cmp-nvim-lsp"     -- LSP completion for cmp
     use "hrsh7th/cmp-nvim-lsp-signature-help"
     use "onsails/lspkind.nvim"
     use 'j-hui/fidget.nvim'
@@ -122,7 +123,7 @@ return require('packer').startup(function(use)
     use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
     --Snippets
-    use "L3MON4D3/LuaSnip" -- snippet engine
+    use "L3MON4D3/LuaSnip"             -- snippet engine
     use "rafamadriz/friendly-snippets" -- many snippets to use
 
     -- LSP
