@@ -37,13 +37,14 @@ return require('packer').startup(function(use)
     --     "catppuccin/nvim",
     --     as = "catppuccin",
     -- }
-    -- use({
-    --     'rose-pine/neovim',
-    --     as = 'rose-pine',
-    -- })
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+    })
     use "rebelot/kanagawa.nvim"
     use { 'sainnhe/everforest' }
-    -- use "olimorris/onedarkpro.nvim"
+    -- If you are using Packer
+    use 'shaunsingh/nord.nvim'
 
     use "mbbill/undotree"
 

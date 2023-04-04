@@ -59,7 +59,7 @@ function ConfigureCatppuccin()
             fidget = true,
         },
     })
-    FixColors()
+    -- FixColors()
 end
 
 function ConfigRosePine()
@@ -219,9 +219,22 @@ function ConfigureEverforest()
     vim.cmd('colorscheme everforest')
 end
 
+function ConfigureNord()
+    vim.g.nord_contrast = true
+    vim.g.nord_borders = true
+    vim.g.nord_disable_background = false
+    vim.g.nord_italic = false
+    vim.g.nord_uniform_diff_background = true
+    vim.g.nord_bold = false
+
+    -- Load the colorscheme
+    require('nord').set()
+end
+
 -- ConfigureCatppuccin()
 -- ConfigRosePine()
-ConfigureKanagawa()
+-- ConfigureKanagawa()
 -- ConfigureGruvbox()
 -- ConfigureOneDark()
 -- ConfigureEverforest()
+ConfigureNord()
