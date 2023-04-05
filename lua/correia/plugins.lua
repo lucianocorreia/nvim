@@ -33,10 +33,10 @@ packer.init({
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- use {
-    --     "catppuccin/nvim",
-    --     as = "catppuccin",
-    -- }
+     use {
+         "catppuccin/nvim",
+         as = "catppuccin",
+     }
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -121,7 +121,7 @@ return require('packer').startup(function(use)
     --     end,
     -- })
 
-    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'hrsh7th/nvim-cmp' }
 
     --Snippets
     use "L3MON4D3/LuaSnip"             -- snippet engine
@@ -132,7 +132,9 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use "jose-elias-alvarez/null-ls.nvim" --formatters and linters
-    use "jlcrochet/vim-razor"
+    -- use "jlcrochet/vim-razor"
+    
+    use "github/copilot.vim"
 
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
@@ -206,3 +208,4 @@ return require('packer').startup(function(use)
 
     -- use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
 end)
+

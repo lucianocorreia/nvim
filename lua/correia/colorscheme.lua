@@ -231,10 +231,10 @@ function ConfigureNord()
     require('nord').set()
 end
 
--- ConfigureCatppuccin()
+ConfigureCatppuccin()
 -- ConfigRosePine()
 -- ConfigureKanagawa()
 -- ConfigureGruvbox()
 -- ConfigureOneDark()
 -- ConfigureEverforest()
-ConfigureNord()
+-- ConfigureNord()
